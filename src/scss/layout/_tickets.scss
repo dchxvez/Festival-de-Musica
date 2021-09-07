@@ -1,0 +1,58 @@
+
+.tickets {
+    padding: 5rem 0;
+
+    h3 {
+        text-align: center;
+        color: $white;
+    }
+
+    .tickets-container {
+        margin-top: 2rem;
+        @include phone {
+            @include grid(2, 2rem);
+        }
+    }
+
+    .plan {
+        p {
+            color: $white;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.pass {
+    width: 100%;
+    border-spacing: 0;
+    thead {
+        background-color: $pink;
+        th {
+            padding: 1.2rem;
+            color: $white;
+            text-transform: uppercase; 
+            font-weight: $light;
+            font-size: 1.8rem;
+        }
+    }
+
+    tbody {
+        background-color: $white;
+        td {
+            padding: 1.2rem;
+            border: 0.5px solid #e1e1e1;
+        }
+    }
+
+    tfoot {
+        background-color: $purple;
+        td {
+            padding: 1.2rem;
+            color: $white;
+            text-align: center;
+            font-size: 2.3rem;
+        }
+    }
+}

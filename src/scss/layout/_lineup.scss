@@ -1,0 +1,81 @@
+.lineup {
+    background-color: $pink;
+    padding: 5rem 0;
+    margin-top: 4rem;
+    h3, p {
+        text-align: center;
+        color: $white;
+    }
+    .day {
+        text-transform: uppercase;
+        margin: 5rem 0;
+    }
+}
+
+.escenary-container {
+    @include tablet {
+        @include grid(2, 5rem);
+    }
+
+    .escenary {
+        padding-top: 2rem;
+    }
+
+    .escenary-name {
+        color: $blackcolor;
+        font-size: 2rem;
+        font-weight: $light;
+
+        &:after {
+            content: '';
+            width: 20rem;
+            height: 10rem;
+            display: block;
+            margin: 2rem auto 0 auto;
+            background-size: 15rem;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+.rock {
+    margin-bottom: 2rem;
+
+    @include tablet {
+        margin-bottom: 0;
+    }
+}
+.edm .escenary-name{
+    &:after {
+        background-image: url(../../../build/img/icono_edm.png);
+    }
+}
+
+.rock .escenary-name {
+    &:after {
+        background-image: url(../../../build/img/icono_rock.png);
+    }
+}
+
+.schedule {
+    padding: 0;
+    list-style: none;
+    margin-bottom: 0;
+    li {
+        padding: 2.5rem;
+        font-weight: $bold;
+        span {
+            font-weight: $regular;
+        }
+
+    }
+
+}
+
+.bg-yellow .schedule li:nth-child(odd) {
+    background-color: darken($yellow, 35);
+}
+
+.bg-green .schedule li:nth-child(even) {
+    background-color: darken($green, 10);
+}

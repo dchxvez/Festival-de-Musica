@@ -1,0 +1,61 @@
+.gallery {
+    padding: 5rem 0;
+
+    h3 {
+        text-align: center;
+    }
+}
+
+.gallery-img {
+    padding: 0;
+    list-style: none;
+    margin-top: 3rem;
+
+    @include grid (2, 2rem);
+
+    @include tablet {
+        @include grid(4, 2rem);
+    }
+
+    @include desktop {
+        @include grid(6, 2rem)
+    }
+
+}
+
+.overlay {
+    position: fixed;
+    background-color: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: grid;
+    place-items: center;
+    img {
+        width: 90%;
+    }
+
+    @include desktop {
+        img {
+            width: initial;
+        }
+    }
+}
+
+.btn-close {
+    width: 3rem;
+    height: 3rem;
+    background-color: $white;
+    display: grid;
+    place-items: center;
+    font-weight: $black;
+    font-size: 2rem;
+    border-radius: 50%;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.fixed {
+    overflow: hidden;
+}
